@@ -9,7 +9,7 @@
 
 Name:           %{?scl_prefix}python-%{pypi_name}
 Version:        1.3.0
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        pkg-config replacement
 
 License:        BSD
@@ -17,7 +17,7 @@ URL:            http://github.com/gbiggs/pykg-config
 Source0:        https://pypi.python.org/packages/source/p/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 
-BuildRequires:  %{?scl:scl_prefix_python}python2-devel
+BuildRequires: %{?scl:python27-}python2-devel >= 2.7
 %{?scl:BuildRequires: %{scl_prefix}build %{scl_prefix}runtime}
 %{?scl:Requires: %{scl_prefix}runtime}
 
@@ -55,6 +55,9 @@ identical output from ...
 %{python2_sitelib}/pykg_config-%{version}-py?.?.egg-info
 
 %changelog
+* Thu Jul 23 2015 Joshua Hoblitt <josh@hoblitt.com> 1.3.0-3
+- 
+
 * Thu Jul 23 2015 Joshua Hoblitt <josh@hoblitt.com> 1.3.0-2
 - new package built with tito
 
