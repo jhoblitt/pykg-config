@@ -9,7 +9,7 @@
 
 Name:           %{?scl_prefix}python-%{pypi_name}
 Version:        1.3.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        pkg-config replacement
 
 License:        BSD
@@ -55,5 +55,8 @@ identical output from ...
 %{python2_sitelib}/pykg_config-%{version}-py?.?.egg-info
 
 %changelog
+* Thu Jul 23 2015 Joshua Hoblitt <josh@hoblitt.com> 1.3.0-2
+- new package built with tito
+
 * Thu Jul 23 2015 jhoblitt - 1.3.0-1
 - Initial package.
