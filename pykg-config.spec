@@ -9,7 +9,7 @@
 
 Name:           %{?scl_prefix}python-%{pypi_name}
 Version:        1.3.0
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        pkg-config replacement
 
 License:        BSD
@@ -45,7 +45,11 @@ identical output from ...
 
 %install
 %{?scl:scl enable %{scl} - << \EOF}
-%{__python2} setup.py install --skip-build --root %{buildroot}
+%{__python2} setup.py install --skip-build \
+    --root %{buildroot} \
+    --install-purelib %{python_sitelib} \
+    --install-scripts=%{_bindir} \
+    --install-data=%{_datadir}
 %{?scl:EOF}
 
 %files
@@ -55,6 +59,9 @@ identical output from ...
 %{python2_sitelib}/pykg_config-%{version}-py?.?.egg-info
 
 %changelog
+* Fri Jul 24 2015 Joshua Hoblitt <josh@hoblitt.com> 1.3.0-4
+- 
+
 * Thu Jul 23 2015 Joshua Hoblitt <josh@hoblitt.com> 1.3.0-3
 - 
 
