@@ -9,7 +9,7 @@
 
 Name:           %{?scl_prefix}python-%{pypi_name}
 Version:        1.3.0
-Release:        4%{?dist}
+Release:        5%{?dist}
 Summary:        pkg-config replacement
 
 License:        BSD
@@ -55,10 +55,13 @@ identical output from ...
 %files
 %doc README.txt LICENSE.txt
 %{_bindir}/pykg-config.py
-%{python2_sitelib}/%{pypi_name}
+%{python2_sitelib}/pypg_config
 %{python2_sitelib}/pykg_config-%{version}-py?.?.egg-info
 
 %changelog
+* Fri Jul 24 2015 Joshua Hoblitt <josh@hoblitt.com> 1.3.0-5
+- 
+
 * Fri Jul 24 2015 Joshua Hoblitt <josh@hoblitt.com> 1.3.0-4
 - 
 
